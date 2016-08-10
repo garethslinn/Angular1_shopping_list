@@ -1,0 +1,31 @@
+<div>
+
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="item in items">
+            <input type="checkbox" ng-model="item.done">
+            <span class="selected-{{item.done}}">{{item.text}}</span>
+        </li>
+    </ul>
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form ng-submit="addItem()">
+                <input class="text" type="text" ng-model="itemText"  size="30" placeholder="add new item here">
+                <input class="btn btn-primary" type="submit" value="add">
+            </form>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <span>{{outstanding()}} of {{items.length}} outstanding</span>
+
+            <button type="button" ng-click="store()" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Store Selected Item
+            </button>
+        </div>
+    </div>
+
+
+</div>
+
