@@ -1,8 +1,8 @@
 myApp.controller('TodoCtrl', ['$scope', function($scope) {
 
     $scope.items = [
-        {text:'learn angular', done:true},
-        {text:'build an angular app', done:false}
+        {text:'first item', done:true},
+        {text:'second item', done:false}
     ];
 
     $scope.addItem = function() {
